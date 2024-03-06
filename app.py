@@ -7,7 +7,7 @@ warnings.filterwarnings('ignore')
 import streamlit as st
 from PIL import Image
 
-from openai import OpenAI
+from langchain.llms import OpenAI
 
 os.environ["OPENAI_API_KEY"] = st.secrets["OPENAI_API_KEY"]
 client = OpenAI(os.environ["OPENAI_API_KEY"])
