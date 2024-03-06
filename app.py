@@ -29,7 +29,7 @@ def add_background_image(image_file):
   
 def generate_test_cases(requirement):
     response = client.chat.completions.create(
-      model="gpt-3.5-turbo",st.markdown(f'<span style="background-color:#DFF2FF;color:#0F52BA;font-family:book-antiqua;font-size:24px;">AI App For Text Summarizing</span>', unsafe_allow_html=True)
+      model="gpt-3.5-turbo"
       messages=[
         {"role": "system", "content": "You are a helpful assistant capable of generating software test cases."},
         {"role": "user", "content": requirement}
