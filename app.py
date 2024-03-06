@@ -36,7 +36,7 @@ def generate_test_cases(requirement):
       ]
     )
     return response.choices[0].message.content
-  add_background_image('bgi.png') 
+add_background_image('bgi.png') 
 st.markdown(f'<span style="background-color:#DFF2FF;color:#0F52BA;font-family:book-antiqua;font-size:24px;">AI App For Generating Test Case</span>', unsafe_allow_html=True)
 test_requirement = st.input("Hi there, Please enter the requirement of your test cases. Enter a statement similar to :The system shall allow users to edit the email body")
 if test_requirement:
