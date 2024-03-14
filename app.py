@@ -24,11 +24,13 @@ def add_background_image(image_file):
     )
   
 from langchain.chat_models import ChatOpenAI
+from langchain.llms import OpenAI
 from langchain.chains import ConversationChain
 from langchain.prompts import PromptTemplate
 from langchain.chains import LLMChain
 
-chat_model = ChatOpenAI()
+#chat_model = ChatOpenAI()
+llmtouse = OpenAI()
 template = """
 Return all the test cases of the following requirement
  
@@ -40,7 +42,7 @@ prompt = PromptTemplate(
     template=template
 )
 chain = LLMChain(
-    llm=chat_model,
+    llm=llmtouse,
     prompt=prompt,
     verbose=True
 )
