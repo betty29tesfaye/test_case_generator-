@@ -8,8 +8,6 @@ import streamlit as st
 from PIL import Image
 
 os.environ["OPENAI_API_KEY"] = st.secrets["OPENAI_API_KEY"]
-client = OpenAI(api_key=os.environ["OPENAI_API_KEY"])
-
 def add_background_image(image_file):
   with open(image_file, "rb") as image_file:
      encoded_string = base64.b64encode(image_file.read())
