@@ -48,7 +48,7 @@ chain = LLMChain(
 )
 add_background_image('bgi.png') 
 st.markdown(f'<span style="background-color:#DFF2FF;color:#0F52BA;font-family:book-antiqua;font-size:24px;">AI App For Generating Test Cases</span>', unsafe_allow_html=True)
-st.markdown(f'<p style="background-color:#b3cee5;color:#414C6B;">{test_requirement = st.text_input("Hi there, Please enter the requirement of your test cases. Enter a statement similar to :The system shall allow users to edit the email body")}</p>', unsafe_allow_html=True) 
+test_requirement = st.text_input("Hi there, Please enter the requirement of your test cases. Enter a statement similar to :The system shall allow users to edit the email body") 
 if test_requirement:
    st.write(chain.run(test_requirement))
 
