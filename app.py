@@ -34,11 +34,11 @@ llmtouse = OpenAI()
 template = """
 Return all the test cases of the following requirement
  
-{test_requirement}
+{system_requirement}
 """
 
 prompt = PromptTemplate(
-    input_variables=['test_requirement'],
+    input_variables=['system_requirement'],
     template=template
 )
 chain = LLMChain(
@@ -48,10 +48,10 @@ chain = LLMChain(
 )
 add_background_image('bgi.png') 
 st.markdown(f'<span style="background-color:#DFF2FF;color:#0F52BA;font-family:book-antiqua;font-size:24px;">AI App For Generating Test Cases</span>', unsafe_allow_html=True)
-st.markdown(f'<p style="background-color:#b3cee5;color:#414C6B;">Hi there to get test cases please enter a statement similar to : The system shall allow users to edit the email body</p>', unsafe_allow_html=True) 
+st.markdown(f'<p style="background-color:#b3cee5;color:#414C6B;">Hi there to get test cases, please enter a statement requirement similar to: The system shall allow users to edit the email body</p>', unsafe_allow_html=True) 
 test_requirement = st.text_input("") 
 if test_requirement:
    with st.spinner('Summarizing'):
-      st.write(chain.run(test_requirement))
+      st.write(chain.run(system_requirement))
 
 
