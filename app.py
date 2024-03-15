@@ -51,7 +51,7 @@ st.markdown(f'<span style="background-color:#DFF2FF;color:#0F52BA;font-family:bo
 st.markdown(f'<p style="background-color:#b3cee5;color:#414C6B;">Hi there to get test cases, please enter a statement requirement similar to: The system shall allow users to edit the email body</p>', unsafe_allow_html=True) 
 system_requirement = st.text_input("") 
 if system_requirement:
-   with st.spinner('Generating The TestCases'):
+   with st.spinner('Generating the test cases'):
       st.write(chain.run(system_requirement))
 
 
