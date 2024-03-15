@@ -52,6 +52,6 @@ st.markdown(f'<p style="background-color:#b3cee5;color:#414C6B;">Hi there to get
 system_requirement = st.text_input("") 
 if system_requirement:
    with st.spinner('Generating the test cases'):
-      st.write("Here are the test cases:" \n {chain.run(system_requirement)})
+      st.write("Here are the test cases: \n" chain.run(system_requirement))
 
 
